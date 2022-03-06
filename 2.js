@@ -28,7 +28,7 @@ const y = (a, sre) => {
 
 var download = function(uri, filename, callback){
   request.head(uri, function(err, res, body){
-      if ((res.headers['content-type'] != 'image/jpeg')&&(res.headers['content-type'] !='image/png')) {
+      if ((res.headers['content-type'] != 'image/jpeg')&&(res.headers['content-type'] !='image/png')&&(res.headers['content-type']!='image/jpg')) {
           console.log('#########',res.headers['content-type']);
           resolve(0);
     }
